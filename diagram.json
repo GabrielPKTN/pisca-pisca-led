@@ -1,0 +1,37 @@
+{
+  "version": 1,
+  "author": "Gabriel Lacerda Correia",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "wokwi-breadboard-half", "id": "bb1", "top": -3, "left": 98.8, "attrs": {} },
+    { "type": "board-esp32-devkit-c-v4", "id": "esp", "top": 105.6, "left": 504.04, "attrs": {} },
+    {
+      "type": "wokwi-led",
+      "id": "led1",
+      "top": 78.4,
+      "left": 359.4,
+      "rotate": 180,
+      "attrs": { "color": "red" }
+    },
+    {
+      "type": "wokwi-resistor",
+      "id": "r1",
+      "top": 33.6,
+      "left": 345.05,
+      "rotate": 90,
+      "attrs": { "value": "200" }
+    }
+  ],
+  "connections": [
+    [ "esp:TX", "$serialMonitor:RX", "", [] ],
+    [ "esp:RX", "$serialMonitor:TX", "", [] ],
+    [ "esp:GND.2", "bb1:tn.25", "black", [ "v0" ] ],
+    [ "led1:A", "bb1:27t.e", "", [ "$bb" ] ],
+    [ "led1:C", "bb1:28t.e", "", [ "$bb" ] ],
+    [ "r1:1", "bb1:tp.22", "", [ "$bb" ] ],
+    [ "r1:2", "bb1:27t.c", "", [ "$bb" ] ],
+    [ "bb1:tn.23", "bb1:28t.a", "black", [ "v0" ] ],
+    [ "esp:13", "bb1:tp.25", "red", [ "h-19.05", "v-259.5" ] ]
+  ],
+  "dependencies": {}
+}
