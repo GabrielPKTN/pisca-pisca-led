@@ -10,6 +10,6 @@
 Fazer o led piscar
 
 # Componentes
-Proto-board - 1
-Resistores - 1
-Jumpers
+- Proto-board: 1
+- Resistores: 1
+- Jumpers
